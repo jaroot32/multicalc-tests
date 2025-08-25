@@ -19,12 +19,17 @@ function Form() {
     <form>
       <label htmlFor="value">Calculate with: </label>
       <input
+        name="Calculate with:"
         type="number"
         id="value"
         value={workingOperand}
         onChange={(e) => setWorkingOperand(e.target.value)}
       />
-      <button onClick={handleSubmit} disabled={workingOperand === ''}>
+      <button
+        onClick={handleSubmit}
+        disabled={workingOperand === ''}
+        name="Submit"
+      >
         Submit
       </button>
     </form>
